@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:widgetspractice/widgets/dismissible_example.dart';
+import 'package:widgetspractice/widgets/DatePicker/date_picker_example.dart';
+import 'package:widgetspractice/widgets/Fittedbox/fittedbox_example.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+List<String> dropDownList = ["Item1", "Item2", "Item3", "Item4"];
+
+class _MyAppState extends State<MyApp> {
+  String dropdownValue = dropDownList.first;
+
   @override
   Widget build(BuildContext context) {
-    // return MaterialApp(home: ExampleName());
-    return MaterialApp(home: DismissibleExample());
+    return MaterialApp(home: FittedboxExample());
   }
 }
